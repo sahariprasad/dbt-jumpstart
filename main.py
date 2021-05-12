@@ -90,6 +90,3 @@ def make_models(input_file_path, output_file_path):
     output_file = open(model_output_path + "\\schema.yml", "w", encoding="utf-8")
     output_file.write(schema_str)
     output_file.close()
-
-
-make_models(r"C:\Users\sahar\Desktop\dbt-starter", r"C:\Users\sahar\Desktop\dbt-starter\models")
