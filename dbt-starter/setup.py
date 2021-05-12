@@ -1,4 +1,5 @@
-from distutils.core import setup
+# from distutils.core import setup
+from setuptools import setup
 
 setup(
   name = 'dbt-starter',         # How you named your package folder (MyLib)
@@ -6,7 +7,7 @@ setup(
   version = '0.1',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'A package to jumpstart a dbt project',   # Give a short description about your library
-  author = 'Hari Prasad Sa',                   # Type in your name
+  author = 'Hari Prasad SA',                   # Type in your name
   author_email = 'sahariprasad@outlook.com',      # Type in your E-Mail
   url = 'https://github.com/sahariprasad/dbt-starter',   # Provide either the link to your github or to your website
   download_url = 'https://github.com/sahariprasad/dbt-starter/archive/refs/tags/v0.1-alpha.tar.gz',    # I explain this later on
