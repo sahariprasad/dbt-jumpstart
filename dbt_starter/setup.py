@@ -2,8 +2,8 @@
 from setuptools import setup
 
 setup(
-  name = 'dbt-starter',         # How you named your package folder (MyLib)
-  packages = ['dbt-starter'],   # Chose the same as "name"
+  name = 'dbt_starter',         # How you named your package folder (MyLib)
+  packages = ['dbt_starter'],   # Chose the same as "name"
   version = '0.1',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'A package to jumpstart a dbt project',   # Give a short description about your library
