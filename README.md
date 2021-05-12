@@ -18,13 +18,13 @@ You need to create two .xlsx spreadsheets - one that contains all the table conf
 
 ##### tables.xlsx
 Create _tables.xlsx_ with the following format. You definitely need to have the column headers as is, but you are free to leave them empty. 
-![img.png](misc/tables.png)
+![img.png](dbtjumpstart/misc/tables.png)
 
 ##### columns.xlsx
 Create a .xlsx spreadsheet in the below format. You definitely need to have the column headers as is, but you are free to leave them empty. 
 >Note that you need to name the sheets with the exact table names that you used in the tables.xlsx
 
-![img.png](misc/columns.png)
+![img.png](dbtjumpstart/misc/columns.png)
 
 #### Python
 
