@@ -9,9 +9,9 @@ setup(
   description = 'A package to jumpstart a dbt project',   # Give a short description about your library
   author = 'Hari Prasad SA',                   # Type in your name
   author_email = 'sahariprasad@outlook.com',      # Type in your E-Mail
-  url = 'https://github.com/sahariprasad/dbt-starter',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/sahariprasad/dbt-starter/archive/refs/tags/v0.1-alpha.tar.gz',    # I explain this later on
-  keywords = ['dbt', 'start'],   # Keywords that define your package best
+  url = 'https://github.com/sahariprasad/dbt-jumpstart',   # Provide either the link to your github or to your website
+  download_url = 'https://github.com/sahariprasad/dbt-jumpstart/archive/refs/tags/v0.1.tar.gz',    # I explain this later on
+  keywords = ['dbt', 'jumpstart'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'pandas',
           'openpyxl',
