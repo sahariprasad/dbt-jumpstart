@@ -7,9 +7,9 @@ setup(
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'A package to jumpstart a dbt project',   # Give a short description about your library
   author = 'Hari Prasad Sa',                   # Type in your name
-  author_email = 'sahariprasad@outlook.vom',      # Type in your E-Mail
+  author_email = 'sahariprasad@outlook.com',      # Type in your E-Mail
   url = 'https://github.com/sahariprasad/dbt-starter',   # Provide either the link to your github or to your website
-  download_url = '',    # I explain this later on
+  download_url = 'https://github.com/sahariprasad/dbt-starter/archive/refs/tags/v0.1-alpha.tar.gz',    # I explain this later on
   keywords = ['dbt', 'start'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'pandas',
