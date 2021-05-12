@@ -29,5 +29,5 @@ jobs:
       run: |
         pwd
         ls
-        python dbt_starter/setup.py sdist bdist_wheel
+        python dbtjumpstart/setup.py sdist bdist_wheel
         twine upload dist/*
