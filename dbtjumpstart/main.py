@@ -68,7 +68,10 @@ def make_models(input_file_path, output_file_path):
         # SQL part
         model_str = "select"
         for column in main_dict[table]["columns"]:
-            model_str = add_line_with_comma(model_str, tab4 + column["name"] + " as " + column["alias"])
+            if column is not main_dict[table]["columns"][-1]:
+                model_str = add_line_with_comma(model_str, tab4 + column["name"] + " as " + column["alias"])
+            else:
+                model_str = add_line(model_str, tab4 + column["name"] + " as " + column["alias"])
         if main_dict[table]["source_or_ref"] == "source":
             model_str = add_line(model_str, "from " + main_dict[table]["source"])
         else:
