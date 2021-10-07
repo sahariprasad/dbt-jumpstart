@@ -2,6 +2,16 @@ import pandas as pd
 import openpyxl
 
 
+# function for adding a line
+def add_line(str1, str2):
+    str1 = str1 + '\n' + str2
+    return str1
+
+# function for adding a line with a comma at the end
+def add_line_with_comma(str1, str2):
+    str1 = str1 + '\n' + str2 + ","
+    return str1
+
 def make_models(input_file_path, output_file_path):
     model_output_path = output_file_path
 
@@ -32,16 +42,6 @@ def make_models(input_file_path, output_file_path):
         main_dict[item["name"]]["source_or_ref"] = item["source_or_ref"]
         main_dict[item["name"]]["columns"] = columns_dict[item["name"]]
 
-    # function for adding a line
-    def add_line(str1, str2):
-        str1 = str1 + '\n' + str2
-        return str1
-
-    # function for adding a line with a comma at the end
-    def add_line_with_comma(str1, str2):
-        str1 = str1 + '\n' + str2 + ","
-        return str1
-
     tab2 = "  "
     tab3 = "   "
     tab4 = 2 * tab2
@@ -64,11 +64,14 @@ def make_models(input_file_path, output_file_path):
         ) 
     }} 
     
-    """
+"""
         # SQL part
         model_str = "select"
         for column in main_dict[table]["columns"]:
-            model_str = add_line_with_comma(model_str, tab4 + column["name"] + " as " + column["alias"])
+            if column is not main_dict[table]["columns"][-1]:
+                model_str = add_line_with_comma(model_str, tab4 + column["name"] + " as " + column["alias"])
+            else:
+                model_str = add_line(model_str, tab4 + column["name"] + " as " + column["alias"])
         if main_dict[table]["source_or_ref"] == "source":
             model_str = add_line(model_str, "from " + main_dict[table]["source"])
         else:
