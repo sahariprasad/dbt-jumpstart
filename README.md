@@ -1,4 +1,4 @@
-# dbt-starter
+# dbt Jumpstart
 
 This project helps quickly create boilerplate dbt models from your requirements instantly without errors and immediately focus on implementing business logic. 
 
