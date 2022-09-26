@@ -1,6 +1,6 @@
 import pandas as pd
 import openpyxl
-
+import os
 
 # function for adding a line
 def add_line(str1, str2):
@@ -15,10 +15,10 @@ def add_line_with_comma(str1, str2):
 def make_models(input_file_path, output_file_path):
     model_output_path = output_file_path
 
-    tables_file = pd.ExcelFile(input_file_path + "\\tables.xlsx")
+    tables_file = pd.ExcelFile(os.path.join(input_file_path, "tables.xlsx"))
     tables_dfs = {sheet_name: tables_file.parse(sheet_name) for sheet_name in tables_file.sheet_names}
 
-    columns_file = pd.ExcelFile(input_file_path + "\\columns.xlsx")
+    columns_file = pd.ExcelFile(os.path.join(input_file_path, "columns.xlsx"))
     columns_dfs = {sheet_name: columns_file.parse(sheet_name) for sheet_name in columns_file.sheet_names}
 
     # convert the dataframes in the columns_dfs to dicts and create a new larger dict containing everything
@@ -77,7 +77,7 @@ def make_models(input_file_path, output_file_path):
         else:
             model_str = add_line(model_str, "from {{ ref('" + main_dict[table]["source"] + "') }}")
 
-        output_file = open(model_output_path + "\\" + table + ".sql", "w", encoding="utf-8")
+        output_file = open(os.path.join(model_output_path, "{}.sql".format(table)), "w", encoding="utf-8")
         output_file.write(config_str + model_str)
         output_file.close()
 
@@ -90,6 +90,6 @@ def make_models(input_file_path, output_file_path):
             schema_str = add_line(schema_str, tab8 + "  name: " + column["name"])
             schema_str = add_line(schema_str, tab8 + "  description: \"" + column["description"] + "\"")
         schema_str = add_line(schema_str, "")
-    output_file = open(model_output_path + "\\schema.yml", "w", encoding="utf-8")
+    output_file = open(os.path.join(model_output_path, "schema.yml"), "w", encoding="utf-8")
     output_file.write(schema_str)
     output_file.close()
