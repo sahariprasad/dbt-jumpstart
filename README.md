@@ -1,8 +1,8 @@
 # dbt-starter
 
-### This project helps quickly create boilerplate dbt models from your requirements instantly without errors and immediately focus on implementing business logic. 
+This project helps quickly create boilerplate dbt models from your requirements instantly without errors and immediately focus on implementing business logic. 
 
->This is now available as a service at [sahariprasad.com/jumpstart](http://sahariprasad.com/jumpstart)
+### This is now available as a service at [sahariprasad.com/jumpstart](http://sahariprasad.com/jumpstart)
 
 >Note: This library is in a pre-production state.
 
