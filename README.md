@@ -41,5 +41,7 @@ Once you run it, check the output path, you will find your models and the schema
 > This project puts the descriptions of the columns and tables in the schema.yml file, does not create a separate markdown file.
 > This feature will be added in future releases
 
-## Known issues
-- There will be a trailing comma at the end of the last column in the models
+## Upcoming features
+- `sources.yml` support
+- Optional quoting of columns
+- dbt tests support
