@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     name='dbtjumpstart',
     packages=['dbtjumpstart'],
-    version='0.1.3',
+    version='0.1.4',
     license='MIT',
     description='A package to jumpstart a dbt project',
     author='Hari Prasad SA',
