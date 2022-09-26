@@ -69,9 +69,9 @@ def make_models(input_file_path, output_file_path):
         model_str = "select"
         for column in main_dict[table]["columns"]:
             if column is not main_dict[table]["columns"][-1]:
-                model_str = add_line_with_comma(model_str, tab4 + column["name"] + " as " + column["alias"])
+                model_str = add_line_with_comma(model_str, tab4 + '"' + column["name"] + '"' + " as " + column["alias"])
             else:
-                model_str = add_line(model_str, tab4 + column["name"] + " as " + column["alias"])
+                model_str = add_line(model_str, tab4 + '"' + column["name"] + '"' + " as " + column["alias"])
         if main_dict[table]["source_or_ref"] == "source":
             model_str = add_line(model_str, "from " + main_dict[table]["source"])
         else:
@@ -93,3 +93,6 @@ def make_models(input_file_path, output_file_path):
     output_file = open(model_output_path + "\\schema.yml", "w", encoding="utf-8")
     output_file.write(schema_str)
     output_file.close()
+
+
+make_models(r"C:\Users\padma\OneDrive\Desktop\dbt-test", r"C:\Users\padma\OneDrive\Desktop\dbt-test-output")
